@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: black;
+}
+
+button{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    color: aliceblue;
+    margin: 50px 0;
+    padding: 12px 36px;
+    border-radius: 36px;
+    font: 600 22px 'sans-serif';
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+button:nth-child(1){
+    background: linear-gradient(
+        rgb(171, 7, 62), rgb(218, 29, 92)
+    );
+}
+
+button:nth-child(2){
+    background: linear-gradient(
+        rgb(218, 29, 92), rgb(171, 7, 62)
+    );
+}
+
+span{
+    position: absolute;
+    border-radius: 50%;
+    background: whitesmoke;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    from{
+        width: 0;
+        height: 0;
+        opacity: .2;
+    }
+    to{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
